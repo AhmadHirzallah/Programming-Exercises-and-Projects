@@ -1,0 +1,14 @@
+# Ignore object files
+*.o
+
+# Ignore Zone.Identifier files
+:Zone.Identifier
+
+# Ignore binary files
+*.bin
+
+# Optionally, exclude any other files or directories you don't want to commit:
+# Example: Ignore all files in obj and bin directories
+obj/
+bin/
+

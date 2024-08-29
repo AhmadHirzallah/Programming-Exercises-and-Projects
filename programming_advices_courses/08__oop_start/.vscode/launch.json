@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "C++ Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/repositories/programming_advices_courses/08__oop_start/access_specifiers_modifiers",  // Adjust this path to your executable
+            "args": [],  // Arguments to pass to the program (if any)
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/repositories/programming_advices_courses/08__oop_start",  // Set working directory
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",  // Make sure gdb is installed in WSL
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",  // Ensure you have a corresponding build task defined
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
